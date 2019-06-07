@@ -6,10 +6,12 @@ public class CurrencyManager {
     int dime = 0;
     int nickel = 0;
 
+    // Convert the dollors into the smallest unit cents
+    // integer type helps avoid log of typecasting/downcasting etc    
     int dollor = totalCents/100;
     totalCents = totalCents%100;
 
-    if(totalCents > 0 && totalCents >= 25) {
+    if(totalCents >= 25) {
         quarter = totalCents/25;
         totalCents = totalCents%25;
     }
