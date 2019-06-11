@@ -36,6 +36,9 @@ public class CurrencyManager {
   }
 
     public void CalculateChange(
+      // There is a catch here with data type as BigDecimal
+      // Double or Float cannot be used as their precision varies during subtraction or division.
+      // If anyone has good idea bout right data type please comment or discuss here.  
       BigDecimal itemPrice, 
       BigDecimal givenMoney) {
       BigDecimal dispenceChange = givenMoney.subtract(itemPrice);  
